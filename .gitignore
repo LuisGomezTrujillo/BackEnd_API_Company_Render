@@ -25,4 +25,6 @@ yarn-error.log*
 /frontend
 /venv
 
+db.sqlite3
+
 
