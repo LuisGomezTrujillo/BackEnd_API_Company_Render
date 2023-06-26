@@ -64,6 +64,7 @@ MIDDLEWARE = [
 CORS_ORIGIN_WHITELIST = (
     'http://localhost',
     'http://localhost:3000',
+    'https://api-company-17qc.onrender.com'
 
 )
 
