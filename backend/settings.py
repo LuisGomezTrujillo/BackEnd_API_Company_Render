@@ -50,6 +50,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',  # tambien para los cors
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -57,15 +58,13 @@ MIDDLEWARE = [
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'corsheaders.middleware.CorsMiddleware',  # tambien para los cors
+    'django.middleware.clickjacking.XFrameOptionsMiddleware'
 ]
 
 CORS_ORIGIN_WHITELIST = (
-    'http://localhost',
-    'http://localhost:3000',
     'https://api-company-17qc.onrender.com'
-
+    #'http://localhost',
+    #'http://localhost:3000',
 )
 
 ROOT_URLCONF = 'backend.urls'
